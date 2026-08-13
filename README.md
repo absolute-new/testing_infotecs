@@ -107,7 +107,7 @@ firefox index.html
 # или
 google-chrome htmlcov/index.html
 ## Структура проекта
-
+```
 <details>
 <summary><b>📁 Структура проекта</b></summary>
 
