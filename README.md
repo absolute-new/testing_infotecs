@@ -117,7 +117,6 @@ cd build/htmlcov
 firefox index.html
 # или
 google-chrome index.html
-## Структура проекта
 ```
 
 ## Документация
@@ -125,7 +124,7 @@ google-chrome index.html
 ```bash
 make docs
 ```
-После этого открой build/docs/html/index.html в браузере.
+После этого открой `build/docs/html/index.html` в браузере.
 
 
 <details>
