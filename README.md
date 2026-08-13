@@ -19,6 +19,7 @@
 ## Сборка
 
 ```bash
+mkdir -p build
 cd build
 cmake ..
 make
@@ -105,7 +106,7 @@ make gcov_report
 cd build/htmlcov
 firefox index.html
 # или
-google-chrome htmlcov/index.html
+google-chrome index.html
 ## Структура проекта
 ```
 <details>
