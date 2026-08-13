@@ -1,0 +1,10 @@
+PROJECT_NAME           = "Logger Project"
+PROJECT_BRIEF          = "Multithreaded C++17 logging library"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = lib/include logger/include stats/include
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
