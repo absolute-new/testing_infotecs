@@ -23,7 +23,7 @@
 Linux/Ubuntu
 ```bash
 sudo apt update
-sudo apt install g++ cmake make doxygen graphviz lcov clang-format
+sudo apt install g++ cmake make doxygen graphviz lcov clang-format libgtest-dev
 ```
 
 ## Сборка
