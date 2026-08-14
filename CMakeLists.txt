@@ -51,4 +51,17 @@ add_custom_target(fclean
 	COMMAND find ${CMAKE_BINARY_DIR} -mindepth 1 -delete
 	WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
 
+add_custom_target(dist
+	COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/dist
+	COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/lib ${CMAKE_BINARY_DIR}/dist/lib
+	COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/stats ${CMAKE_BINARY_DIR}/dist/stats
+	COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/logger ${CMAKE_BINARY_DIR}/dist/logger
+	COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/tests ${CMAKE_BINARY_DIR}/dist/tests
+	COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/CMakeLists.txt ${CMAKE_BINARY_DIR}/dist
+	COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/Doxyfile ${CMAKE_BINARY_DIR}/dist
+	COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/logger.conf ${CMAKE_BINARY_DIR}/dist
+	COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/README.md ${CMAKE_BINARY_DIR}/dist
+	COMMAND tar -czf ${CMAKE_BINARY_DIR}/logger-project.tar.gz -C ${CMAKE_BINARY_DIR}/dist .
+	COMMAND ${CMAKE_COMMAND} -E echo "Distribution created: ${CMAKE_BINARY_DIR}/logger-project.tar")
+
 
